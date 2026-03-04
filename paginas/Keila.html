@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio Profesional - Keila Buelvas</title>
+
+<link rel="stylesheet" href="/css/Keila.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <img src="/imagenes/foto.jpg.jpeg" alt="Foto de perfil" class="foto">
+    <h1><i class="fa-solid fa-user"></i> Keila Buelvas</h1>
+    <p>Estudiante Universitaria | ingenieria de software</p>
+</header>
+
+<nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#referencias">Referencias</a>
+    <a href="#jad">Punto JAD</a>
+    <a href="#adjuntos">Archivos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#diploma">diploma</a>
+</nav>
+
+<div id="contenidoPDF">
+
+<section id="perfil">
+    <div class="card">
+        <h2><i class="fa-solid fa-id-card"></i> Perfil Profesional</h2>
+        <p>
+            Estudiante responsable, organizada y comprometida con el aprendizaje continuo.
+            Poseo habilidades en trabajo en equipo y desarrollo web básico.
+        </p>
+        <button onclick="reproducirSonido()">Reproducir sonido</button>
+    </div>
+</section>
+
+<section id="referencias">
+    <div class="card">
+        <h2><i class="fa-solid fa-briefcase"></i> Referencias Profesionales</h2>
+        <p><strong>Nasly Buelvas</strong> – Miembro de la junta directiva mutual EPS – 3114187358</p>
+        <p><strong>Yesica Buelvas</strong> – Contadora publica-coach de vida – 3004844901</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fa-solid fa-house"></i> Referencias Familiares</h2>
+        <p><strong>Nasly Buelvas</strong> – Familiar – 3114187358</p>
+        <p><strong>Yesica Buelvas</strong> – Familiar – 3004844901</p>
+    </div>
+</section>
+
+<section id="jad">
+    <div class="card">
+        <h2><i class="fa-solid fa-users"></i> Punto JAD</h2>
+        <p>
+            El punto JAD (Joint Application Development) es una metodología que permite
+            la participación activa de usuarios y desarrolladores en la definición
+            de requisitos de un sistema.
+        </p>
+        <button onclick="mensajeJAD()">Interactividad</button>
+    </div>
+</section>
+<section id="diploma">
+    <div class="card">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Diploma</h2>
+        <img src="/imagenes/imagen.jpg.jpeg" alt="Diploma Académico" class="imagen-diploma">
+        <p>Diploma de Bachiller Académico.</p>
+    </div>
+</section>
+<section id="adjuntos">
+    <div class="card">
+        <h2><i class="fa-solid fa-file"></i> Archivos Adjuntos</h2>
+        <p>Puedes descargar los siguientes documentos:</p>
+        <a href="Hoja_de_Vida.pdf" download>
+            <button>Descargar Hoja de Vida</button>
+        </a>
+    </div>
+</section>
+
+<section id="contacto">
+    <div class="card">
+        <h2><i class="fa-solid fa-envelope"></i> 3105986224</h2>
+        <p>Email: buelvask1218@gmail.com</p>
+        <p>San José de Lata, Bolivar</p>
+        <button onclick="generarPDF()">Generar PDF</button>
+    </div>
+</section>
+
+</div>
+
+<!-- Sonido -->
+<audio id="audio" src="/sonidos/MP3 .mp3.mpeg"></audio>
+
+<script>
+function reproducirSonido() {
+    document.getElementById("audio").play();
+}
+
+function mensajeJAD() {
+    alert("Gracias por interactuar con el punto JAD 😊");
+}
+
+function generarPDF() {
+    const elemento = document.getElementById("contenidoPDF");
+    html2pdf().from(elemento).save("Portafolio_Keila_Buelvas.pdf");
+}
+</script>
+
+</body>
+</html>

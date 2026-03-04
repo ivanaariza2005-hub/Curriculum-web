@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida - Daniela Paez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/Daniela.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- BANNER -->
+<header class="banner">
+  <img src="/imagenes/image.png" alt="Foto Daniela" class="foto-perfil">
+    <h1>Daniela Andrea Paez Alvis</h1>
+    <p>Estudiante de Ingeniería de Software</p>
+</header>
+
+<!-- AUDIO -->
+<audio id="audioFondo" loop>
+    <source src="/sonidos/audio.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+    const audio = document.getElementById("audioFondo");
+    audio.play().catch(() => {
+        document.body.addEventListener("click", () => {
+            audio.play();
+        }, { once: true });
+    });
+});
+</script>
+
+<script>
+document.body.addEventListener('click', () => {
+    document.getElementById('miAudio').play();
+}, { once: true });
+</script>
+
+<!-- CONTENIDO -->
+<main class="contenedor">
+
+<section>
+    <h2><i class="fa-solid fa-user"></i> Datos personales</h2>
+    <ul>
+        <li><strong>Documento:</strong> C.C. 1043136652</li>
+        <li><strong>Fecha de nacimiento:</strong> 6 de febrero de 2007</li>
+        <li><strong>Edad:</strong> 19 años</li>
+        <li><strong>Ciudad:</strong> El Carmen de Bolívar, Bolívar</li>
+        <li><strong>Dirección:</strong> Carrera 40 Calle 28B #228 Apto 1</li>
+        <li><strong>Teléfono:</strong> 321 839 2265</li>
+        <li><strong>Correo:</strong> dpaeza@unicartagena.edu.co</li>
+        <li><strong>Estado civil:</strong> Soltera</li>
+    </ul>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-id-card"></i> Perfil profesional</h2>
+    <p>
+        Estudiante de Ingeniería de Software y Tecnóloga en Análisis y Desarrollo de Software,
+        con interés en el diseño, análisis y desarrollo de soluciones tecnológicas. Me caracterizo
+        por ser una persona responsable, amable y comprometida, con disposición permanente para
+        aprender y trabajar en equipo.
+    </p>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-graduation-cap"></i> Formación académica</h2>
+    <ul>
+        <li><strong>Ingeniería de Software</strong> – Universidad de Cartagena (En curso)</li>
+        <li><strong>Tecnólogo en Análisis y Desarrollo de Software</strong> – SENA (En curso)</li>
+    </ul>
+</section>
+<section>
+    <h2> Diploma de Bachiller</h2>
+    <p>
+        <a href="/imagenes/Diploma .pdf" target="_blank">
+            📄 Ver diploma de bachiller
+        </a>
+    </p>
+</section>
+<section>
+    <h2><i class="fa-solid fa-briefcase"></i> Experiencia</h2>
+    <p>
+        Experiencia en proyectos académicos relacionados con el desarrollo web,
+        análisis y diseño de software, uso de HTML, CSS y documentación básica de proyectos.
+    </p>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-list-check"></i> Habilidades</h2>
+    <div class="habilidades">
+        <ul>
+            <li>HTML básico</li>
+            <li>CSS básico</li>
+            <li>Ofimática</li>
+            <li>Manejo de herramientas digitales</li>
+        </ul>
+        <ul>
+            <li>Responsabilidad</li>
+            <li>Trabajo en equipo</li>
+            <li>Comunicación</li>
+            <li>Puntualidad</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-certificate"></i> Cursos</h2>
+    <ul>
+        <li>English Does Work – Level 1 | SENA | 2025</li>
+        <li>English Does Work – Level 2 | SENA | 2025</li>
+        <li>Aprendiz Digital | SENA | 2025</li>
+        <li>Reconocimiento de la ciencia y la innovación | SENA | 2021</li>
+    </ul>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-address-book"></i> Referencias</h2>
+    <p><strong>Profesional:</strong> Carlos Andrés Martínez López – 318 839 2265</p>
+    <p><strong>Familiar:</strong> Loraine Julieth Alvis Navarro (Madre) – 311 686 9577</p>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-circle-info"></i> Punto JAD</h2>
+    <p>
+        Esta hoja de vida fue desarrollada aplicando conocimientos básicos de HTML y CSS,
+        priorizando la organización de la información, el diseño adaptable y la correcta
+        presentación de los datos personales y académicos.
+    </p>
+</section>
+
+<!-- INTERACTIVIDAD -->
+<button onclick="window.print()" class="btn">
+    <i class="fa-solid fa-file-pdf"></i> Generar PDF
+</button>
+
+</main>
+
+<footer>
+    <p>Hoja de vida digital – 2026</p>
+</footer>
+
+</body>
+</html>

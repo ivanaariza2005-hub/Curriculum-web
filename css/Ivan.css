@@ -1,0 +1,161 @@
+
+   :root {
+    --bg: #faf8f4;
+    --dark: #0f0f14;
+    --accent: #a18007;
+    --accent-soft: rgba(232, 197, 71, 0.1);
+    --muted: #097705;
+    --border: #e5e0d8;
+    --text: #1a1a24;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  nav a { color: rgba(255, 255, 255, 0.5); }
+  nav a:hover { color: var(--accent); }
+  nav .current { color: var(--accent); }
+  
+  .hero-band::after { content: 'AGL'; }
+  .hero-band .tag {
+    border: 1px solid rgba(134, 116, 51, 0.4);
+    color: var(--accent);
+  }
+  .hero-band h1 em { color: var(--accent); }
+  
+  .photo-wrap {
+    border: 3px solid var(--accent);
+    background: #1e1e2c;
+  }
+  
+  .sidebar { border-right: 1px solid var(--border); }
+  
+  .section-label { color: var(--muted); }
+  .section-label::after { background: var(--border); }
+  
+  .skill-name span { color: var(--muted); }
+  .skill-bar { background: var(--border); }
+  .skill-fill { background: var(--accent); }
+  
+  .tag-item {
+    background: var(--accent-soft);
+    border: 1px solid rgba(232, 197, 71, 0.25);
+    color: #6a5a10;
+  }
+ 
+  .contact-item { color: var(--muted); }
+  .contact-item strong { color: var(--text); }
+  
+  
+  .timeline-item::before { background: var(--accent); }
+  .timeline-item::after { background: var(--border); }
+  .tl-period { color: var(--muted); }
+  .tl-company { color: var(--muted); }
+  .tl-desc { color: var(--muted); }
+  
+  .edu-school { color: var(--muted); }
+  .edu-year { color: var(--accent); }
+  
+  .dot { background: var(--border); }
+  .dot.filled { background: var(--accent); }
+
+  .perfil-texto { color: #3a3a4a; }
+  
+
+  footer a { color: var(--accent); }
+  .btn-custom {
+    background-color: #14c431;
+    color: rgb(17, 11, 11);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0e3486;
+  }
+  
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  animation: aparecer 0.3s ease;
+}
+
+
+.img-diploma {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@keyframes aparecer {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.foto-perfil {
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .btn-custom,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  #cv {
+    width: 100%;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+}
