@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio Profesional - Keila Buelvas</title>
+<title>Portafolio Keila Buelvas</title>
 
-<link rel="stylesheet" href="/css/Keila.css">
-
+<link rel="stylesheet" href="../css/Keila.css">
+<!-- Iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- Librería para generar PDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
 </head>
 
 <body>
 
 <header>
+
     <img src="/imagenes/foto.jpg.jpeg" alt="Foto de perfil" class="foto">
     <h1><i class="fa-solid fa-user"></i> Keila Buelvas</h1>
     <p>Estudiante Universitaria | ingenieria de software</p>
 </header>
 
 <nav>
+    <a href="/index.html"> Inicio</a>       
+    <a href="/paginas/Ivan.html">⬅ CV Anterior</a> 
     <a href="#perfil">Perfil</a>
     <a href="#referencias">Referencias</a>
-    <a href="#jad">Punto JAD</a>
+    <a href="#Experiencia">Experiencia</a>
     <a href="#adjuntos">Archivos</a>
     <a href="#contacto">Contacto</a>
     <a href="#diploma">diploma</a>
+    <a href="#certificaciones">certificaciones</a>
+    <a href="/paginas/Yeison.html">Siguiente CV</a>
 </nav>
 
 <div id="contenidoPDF">
 
 <section id="perfil">
     <div class="card">
+        <section>
+<h2>Diploma</h2>
+
+<p>
+Puedes visualizar mi diploma en formato PDF haciendo clic en el siguiente enlace.
+</p>
+
+<a href="/imagenes/imagen.jpg.jpeg" target="_blank">
+<button>Ver mi diploma en PDF</button>
+</a>
+
+</section>
         <h2><i class="fa-solid fa-id-card"></i> Perfil Profesional</h2>
         <p>
             Estudiante responsable, organizada y comprometida con el aprendizaje continuo.
@@ -41,7 +62,36 @@
         <button onclick="reproducirSonido()">Reproducir sonido</button>
     </div>
 </section>
+<section id="certificaciones">
+    <div class="card">
+        <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
 
+        <p>
+            📄 Certificado de fundamentos basicos en salud ocupacional
+            <br>
+            <a href="/imagenes/certificado.pdf salud oc.pdf" target="_blank">
+                Ver certificado en PDF
+            </a>
+        </p>
+
+        <p>
+            📄 certificado en fundamentos de la norma ISO IEC 17025 2017
+            <br>
+            <a href="/imagenes/pdf. normas ISO.pdf" target="_blank">
+                Ver certificado en PDF
+            </a>
+        </p>
+
+        <p>
+            📄 certificado en gestion de residuos solidos en la sociedad moderna
+            <br>
+            <a href="/imagenes/pdf.certificado rs.pdf" target="_blank">
+                Ver certificado en PDF
+            </a>
+        </p>
+
+    </div>
+</section>
 <section id="referencias">
     <div class="card">
         <h2><i class="fa-solid fa-briefcase"></i> Referencias Profesionales</h2>
@@ -56,22 +106,16 @@
     </div>
 </section>
 
-<section id="jad">
+<section id="Experiencia">
     <div class="card">
         <h2><i class="fa-solid fa-users"></i> Punto JAD</h2>
         <p>
-            El punto JAD (Joint Application Development) es una metodología que permite
-            la participación activa de usuarios y desarrolladores en la definición
-            de requisitos de un sistema.
+            Mi experiencia se basa en hacer pequeños proyectos,desarrollar paginas web con diseños adaptables a el usuario y demas. 
         </p>
         <button onclick="mensajeJAD()">Interactividad</button>
     </div>
 </section>
-<section id="diploma">
-    <div class="card">
-        <h2><i class="fa-solid fa-graduation-cap"></i> Diploma</h2>
-        <img src="/imagenes/imagen.jpg.jpeg" alt="Diploma Académico" class="imagen-diploma">
-        <p>Diploma de Bachiller Académico.</p>
+
     </div>
 </section>
 <section id="adjuntos">
@@ -86,13 +130,33 @@
 
 <section id="contacto">
     <div class="card">
-        <h2><i class="fa-solid fa-envelope"></i> 3105986224</h2>
-        <p>Email: buelvask1218@gmail.com</p>
-        <p>San José de Lata, Bolivar</p>
+        <h2><i class="fa-solid fa-envelope"></i> Contacto</h2>
+
+        <form id="formularioContacto" onsubmit="enviarFormulario(event)">
+            
+            <label>Nombre:</label><br>
+            <input type="text" id="nombre" required><br><br>
+
+            <label>Correo:</label><br>
+            <input type="email" id="correo" required><br><br>
+
+            <label>Mensaje:</label><br>
+            <textarea id="mensaje" rows="4" required></textarea><br><br>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <p id="respuesta" style="margin-top:10px;"></p>
+
+        <hr>
+
+        <p><strong>Teléfono:</strong> 3105986224</p>
+        <p><strong>Email:</strong> buelvask1218@gmail.com</p>
+        <p>San José de Lata, Bolívar</p>
+
         <button onclick="generarPDF()">Generar PDF</button>
     </div>
 </section>
-
 </div>
 
 <!-- Sonido -->
@@ -104,14 +168,52 @@ function reproducirSonido() {
 }
 
 function mensajeJAD() {
-    alert("Gracias por interactuar con el punto JAD 😊");
+    alert("Gracias por interactuar con punto JAD😊");
 }
 
 function generarPDF() {
     const elemento = document.getElementById("contenidoPDF");
     html2pdf().from(elemento).save("Portafolio_Keila_Buelvas.pdf");
 }
+function enviarFormulario(event) {
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
+    let mensaje = document.getElementById("mensaje").value;
+
+    let respuesta = document.getElementById("respuesta");
+
+    if(nombre && correo && mensaje){
+        respuesta.innerHTML = "✅ Mensaje enviado correctamente, " + nombre + "!";
+        respuesta.style.color = "green";
+
+        // Limpiar formulario
+        document.getElementById("formularioContacto").reset();
+    } else {
+        respuesta.innerHTML = "❌ Por favor completa todos los campos.";
+        respuesta.style.color = "red";
+    }
+}
+function irArriba() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.onscroll = function() { 
+    let boton = document.getElementById("btnArriba");
+    
+    if (document.documentElement.scrollTop > 200) {
+        boton.style.display = "block";
+    } else {
+        boton.style.display = "none";
+    }
+};
 </script>
+
+<!-- BOTÓN VOLVER ARRIBA -->
+<button id="btnArriba" onclick="irArriba()">⬆</button>
 
 </body>
 </html>
+</script>
+</script>

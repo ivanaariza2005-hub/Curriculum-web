@@ -3,153 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ivan Ariza—Hoja de Vida</title>
-  <link rel="stylesheet" href="../css/global.css">
+  <title> CV - Ivan Ariza</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../css/Ivan.css">
 </head>
 <body>
-  <div id="cv">
 
-    <nav>
-      <a href="../index.html">Inicio</a>
+  <nav class="cv-nav">
+    <div class="container">
+      <a href="../index.html"><i class="bi bi-house"></i> Inicio</a>
       <span class="sep">/</span>
-      <span class="current">Ivan Ariza </span>
-    </nav>
+      <span class="current">Ivan Ariza</span>
+    </div>
+  </nav>
 
-    <div class="hero-band">
-      <div class="photo-wrap">
-        <img src="/imagenes/imagen curriculum.jpg" alt="Foto de Ivan Ariza" class="foto-perfil">
-      </div>
-
-      <h1>Ivan<br><em>Ariza</em></h1>
-      <div class="hero-meta">
-        <div><p class="label">Direccion</p><p class="val">Vereda - La Pava</p></div>
-        <div><p class="label">Disponibilidad</p><p class="val">Lunes a viernes de 7AM a 4PM</p></div>
-        <div><p class="label">Experiencia</p><p class="val">Estudiante sin experiencia</p></div>
+  <div class="hero-band">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-auto">
+          <img src="/imagenes/imagen curriculum.jpg" alt="Foto de Ivan Ariza" class="foto-perfil">
+        </div>
+        <div class="col">
+          <span class="hero-tag">Ing. Software </span>
+          <h1 class="hero-name">Ivan<br><em>Ariza</em></h1>
+        </div>
+        <div class="col-12 col-md-auto">
+          <div class="row g-3 g-md-4">
+            <div class="col hero-meta-item">
+              <p class="label">Dirección</p>
+              <p class="val">Vereda — La Pava</p>
+            </div>
+            <div class="col hero-meta-item">
+              <p class="label">Disponibilidad</p>
+              <p class="val">Lun–Vie · 7AM–4PM</p>
+            </div>
+            <div class="col hero-meta-item">
+              <p class="label">Experiencia</p>
+              <p class="val">Estudiante activo</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
   <div id="cv">
-    <div class="layout">
-      <aside class="sidebar">
+    <div class="container-fluid px-0">
+      <div class="cv-layout">
 
-        <section class="section">
-          <h3 class="section-label">Contacto</h3>
-          <div class="contact-item">Correo electronico:<strong>arizaivan628@gmail.com</strong></div>
-          <div class="contact-item">Numero de telefono:<strong>3002669072</strong></div>
-        </section>
+        <aside class="cv-sidebar">
 
-        <section class="section">
-          <h3 class="section-label">Habilidades</h3>
-          <div class="skill-item">
-            <div class="skill-name">HTML<span>95%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Css <span>40%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:40%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">MySQl <span>85%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Python <span>60%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Java <span>40%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:40%"></div></div>
-          </div>
-        </section>
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-person-lines-fill"></i> Contacto</h3>
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <span class="c-label">Correo</span>
+                <strong>arizaivan628@gmail.com</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <span class="c-label">Teléfono</span>
+                <strong>300 266 9072</strong>
+              </div>
+            </div>
+          </section>
 
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-bar-chart-fill"></i> Habilidades</h3>
+            <div class="skill-item">
+              <div class="skill-name">HTML <span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">CSS <span class="skill-pct">40%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="40"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">MySQL <span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Python <span class="skill-pct">60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Java <span class="skill-pct">40%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="40"></div></div>
+            </div>
+          </section>
 
-
-        <section class="section">
-          <h3 class="section-label">Idiomas</h3>
-          <div class="lang-item">
-            <span class="lang-name">Español</span>
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-translate"></i> Idiomas</h3>
             <div class="lang-item">
-              <div class="dot filled"></div><div class="dot filled"></div>
-              <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+              <span>Español</span>
+              <div class="lang-dots">
+                <div class="dot filled"></div>
+                <div class="dot filled"></div>
+                <div class="dot filled"></div>
+                <div class="dot filled"></div>
+                <div class="dot filled"></div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-      </aside>
+        </aside>
 
-      <main class="main">
+        <main class="cv-main">
 
-        <section class="section">
-          <h3 class="section-label">Perfil Profesional</h3>
-          <p class="perfil-texto">
-            Soy un estudiante de ingeniería de software con una pasión por el desarrollo web y la programación. Me considero una persona proactiva, con habilidades para el trabajo en equipo y siempre dispuesto a aprender nuevas tecnologías. Mi objetivo es adquirir experiencia práctica en el campo de la tecnología y contribuir al desarrollo de proyectos innovadores que tengan un impacto positivo en la sociedad.
-          </p>
-        </section>
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-person-circle"></i> Perfil Profesional</h3>
+            <p class="perfil-texto">
+              Soy un estudiante de Ingeniería de Software con pasión por el desarrollo web y la programación.
+              Me considero proactivo, con habilidades para el trabajo en equipo y siempre dispuesto a aprender
+              nuevas tecnologías. Mi objetivo es adquirir experiencia práctica y contribuir a proyectos
+              innovadores con impacto positivo en la sociedad.
+            </p>
+          </section>
 
-        <section class="section">
-          <h3 class="section-label">Botones interactivos</h3>
-        
-          <div style="margin-bottom:20px;">
-            <button id="btnDiploma" class="btn-custom">
-              Ver Diploma
-            </button>
-          
-          <div id="modalDiploma" class="modal">
-            <div class="modal-content">
-              <span class="cerrar">&times;</span>
-              <img src="/imagenes/diploma ivan.jpg" alt="Diploma" class="img-diploma">
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-lightning-charge-fill"></i> Acciones</h3>
+            <div class="d-flex flex-wrap gap-3">
+              <button id="btnDiploma" class="btn-gold" data-bs-toggle="modal" data-bs-target="#modalDiploma">
+                <i class="bi bi-award-fill"></i> Ver Diploma
+              </button>
+              <button id="btnSonido" class="btn-gold" onclick="reproducirSonido()">
+                <i class="bi bi-play-circle-fill"></i> Reproducir Sonido
+              </button>
+              <button id="btnPDF" class="btn-gold">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i> Descargar CV en PDF
+              </button>
             </div>
-          </div>
-            
-          
-          </div>
-          <div>
-            <button onclick="reproducirSonido()" class="btn-custom">
-              Reproducir Sonido
-            </button>
-          </div>
-        
-          <div id="diplomaContainer" style="display:none; margin-top:20px;">
-            <img src="/imagenes/diploma ivan.jpg" alt="Diploma" style="max-width:100%; border-radius:10px;">
-          </div>
-        
-          <audio id="miAudio" src="/sonidos/sonido ivan.mp3"></audio>
-          <br>
-          <button id="btnPDF" class="btn-custom">
-            Descargar CV en PDF
-          </button>
-        </section>
-        <section class="section">
-          <h3 class="section-label">Educación</h3>
-          <div class="edu-item">
-            <p class="edu-year">2024 - en progreso</p>
-            <p class="edu-degree">Ingeniería de Software</p>
-            <p class="edu-school">Universidad de Cartagena - Centro tutorial San Juan</p>
-          </div>
-          <div class="edu-item">
-            <p class="edu-year">2018 - 2023</p>
-            <p class="edu-degree">Bachiller academico</p>
-            <p class="edu-school">Institucion Educativa Tecnica Agroindustrial de Malagana</p>
-          </div>
-          <div class="edu-item">
-            <p class="edu-year">2012 - 2017</p>
-            <p class="edu-degree">Primaria</p>
-            <p class="edu-school">Institucion Educativa Tecnica Francisco de Paula Santander</p>
-          </div>
-        </section>
+          </section>
 
-      </main>
+          <section class="section fade-in">
+            <h3 class="section-label"><i class="bi bi-mortarboard-fill"></i> Educación</h3>
+            <div class="edu-item">
+              <p class="edu-year">2024 — en progreso</p>
+              <p class="edu-degree">Ingeniería de Software</p>
+              <p class="edu-school">Universidad de Cartagena · Centro Tutorial San Juan</p>
+            </div>
+            <div class="edu-item">
+              <p class="edu-year">2018 — 2023</p>
+              <p class="edu-degree">Bachiller Académico</p>
+              <p class="edu-school">I.E.T. Agroindustrial de Malagana</p>
+            </div>
+            <div class="edu-item">
+              <p class="edu-year">2012 — 2017</p>
+              <p class="edu-degree">Educación Primaria</p>
+              <p class="edu-school">I.E.T. Francisco de Paula Santander</p>
+            </div>
+          </section>
+
+          <section class="section fade-in" id="formSection">
+            <h3 class="section-label"><i class="bi bi-send-fill"></i> Formulario de Contacto</h3>
+            <div class="form-section">
+              <p class="form-intro">
+                ¿Tienes una propuesta o quieres ponerte en contacto? Completa el formulario y recibirás una respuesta pronto.
+              </p>
+
+              <div id="cvForm" novalidate>
+                <div class="row g-3">
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label">Nombre <span class="req">*</span></label>
+                    <input type="text" id="fNombre" class="form-control" placeholder="Ej: Carlos Rodríguez" autocomplete="off">
+                    <div class="invalid-feedback" id="errNombre"></div>
+                    <div class="valid-feedback">✓ Nombre válido</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label">Apellido <span class="req">*</span></label>
+                    <input type="text" id="fApellido" class="form-control" placeholder="Ej: López" autocomplete="off">
+                    <div class="invalid-feedback" id="errApellido"></div>
+                    <div class="valid-feedback">✓ Apellido válido</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label">Correo Electrónico <span class="req">*</span></label>
+                    <input type="email" id="fEmail" class="form-control" placeholder="correo@ejemplo.com" autocomplete="off">
+                    <div class="invalid-feedback" id="errEmail"></div>
+                    <div class="valid-feedback">✓ Correo válido</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label">Teléfono <span class="req">*</span></label>
+                    <input type="tel" id="fTelefono" class="form-control" placeholder="300 000 0000" maxlength="15" autocomplete="off">
+                    <div class="invalid-feedback" id="errTelefono"></div>
+                    <div class="valid-feedback">✓ Teléfono válido</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">Motivo de Contacto <span class="req">*</span></label>
+                    <select id="fMotivo" class="form-select">
+                      <option value="">— Selecciona una opción —</option>
+                      <option value="propuesta">Propuesta laboral</option>
+                      <option value="proyecto">Colaboración en proyecto</option>
+                      <option value="practica">Práctica profesional</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                    <div class="invalid-feedback" id="errMotivo"></div>
+                    <div class="valid-feedback">✓ Selección válida</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">Asunto <span class="req">*</span></label>
+                    <input type="text" id="fAsunto" class="form-control" placeholder="Asunto breve del mensaje" maxlength="80" autocomplete="off">
+                    <div class="invalid-feedback" id="errAsunto"></div>
+                    <div class="valid-feedback">✓ Asunto válido</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">Mensaje <span class="req">*</span></label>
+                    <textarea id="fMensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..." maxlength="500"></textarea>
+                    <div class="d-flex justify-content-between align-items-start mt-1">
+                      <div class="invalid-feedback d-block" id="errMensaje"></div>
+                      <span class="char-counter" id="charCount">0 / 500</span>
+                    </div>
+                    <div class="valid-feedback" id="msgValid"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fTerminos">
+                      <label class="form-check-label" for="fTerminos">
+                        Acepto que mis datos sean usados para contacto <span class="req">*</span>
+                      </label>
+                    </div>
+                    <div class="invalid-feedback d-block" id="errTerminos"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="button" id="btnEnviar" class="btn-gold btn-enviar">
+                      <i class="bi bi-send-fill"></i> Enviar Mensaje
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
     </div>
 
+    <div class="modal fade" id="modalDiploma" tabindex="-1" aria-labelledby="modalDiplomaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDiplomaLabel">
+              <i class="bi bi-award-fill me-2"></i>Diploma
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="/imagenes/diploma ivan.jpg" alt="Diploma de Ivan Ariza" class="img-diploma"
+                 onerror="this.src='https://via.placeholder.com/800x560/1e1e2c/c9a84c?text=Diploma+no+disponible'">
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="/js/ivan.js"></script>
-    <footer>
-      <a href="../index.html">← Volver al Portal</a> &nbsp;·&nbsp;
-      <a href="Keila.html">Ver siguiente perfil →</a>
-    </footer>
-    <script src="../js/ivan.js"></script>
   </div>
+
+  <div id="toastContainer"></div>
+
+  <audio id="miAudio" src="/sonidos/sonido ivan.mp3"></audio>
+
+  <footer>
+    <a href="/paginas/Daniela.html">← Ver perfil anterior</a>
+    &nbsp;·&nbsp;
+    <a href="Keila.html">Ver siguiente perfil →</a>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="/js/ivan.js"></script>
+
 </body>
 </html>

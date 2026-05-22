@@ -1,0 +1,720 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cv-container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Encabezado */
+.cv-header {
+    background: linear-gradient(135deg, #667eea 0%, #830875 100%);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-section h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones del encabezado */
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.header-btn:hover {
+    background: white;
+    color: #667eea;
+    transform: scale(1.1);
+}
+
+/* Foto de Perfil */
+.photo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#profile-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-upload-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.2em;
+}
+
+.photo-upload-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenido Principal */
+.cv-main {
+    padding: 30px;
+}
+
+/* Secciones */
+.cv-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cv-section h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cv-section h2 i {
+    color: #f00bce;
+}
+
+/* Enlace de sección */
+.section-link {
+    color: #999;
+    font-size: 0.7em;
+    margin-left: auto;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-link:hover {
+    color: #667eea;
+}
+
+/* Información Personal */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.toggle-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.experience-toggle-btn {
+    background: #667eea;
+}
+
+.experience-toggle-btn:hover {
+    background: #5568d3;
+}
+
+.info-item {
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item.full-width {
+    grid-column: span 2;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-label i {
+    font-size: 1em;
+}
+
+.info-value {
+    color: #333;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.info-value a {
+    color: #764ba2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-value a:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+/* Botones de acción */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #6e85ed;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: #764ba2;
+    transform: scale(1.1);
+}
+
+.action-btn.whatsApp {
+    background: #25D366;
+}
+
+.action-btn.whatsApp:hover {
+    background: #128C7E;
+}
+
+.contact-link {
+    font-weight: 500;
+}
+
+/* Botón de información extra */
+.info-btn {
+    color: #999;
+    font-size: 0.8em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-btn:hover {
+    color: #667eea;
+}
+
+/* Experiencia */
+.experience-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #764ba2;
+}
+
+.experience-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05em;
+}
+
+.experience-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.exp-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.exp-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+/* Información Académica */
+.academic-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.diploma-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.diploma-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1em;
+}
+
+.diploma-label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.diploma-label i {
+    font-size: 1.3em;
+}
+
+.diploma-preview {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+}
+
+.no-diploma {
+    color: #999;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.diploma-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #d4edda;
+    border-radius: 8px;
+    color: #155724;
+    width: 100%;
+    justify-content: center;
+}
+
+.diploma-info i {
+    font-size: 1.2em;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+/* Botones académicos */
+.academic-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.academic-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.academic-btn:hover {
+    background: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Botón de Diploma */
+section-toggle-btn.diploma-download-btn, .diploma-download-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 15px auto 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    width: 100%;
+}
+
+.diploma-download-btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.diploma-download-btn i {
+    font-size: 1.2em;
+}
+
+.diploma-download-btn:active {
+    transform: scale(0.98);
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.social-btn i {
+    font-size: 1.5em;
+}
+
+.social-btn span {
+    font-size: 0.85em;
+}
+
+.social-btn.phone {
+    background: #667eea;
+}
+
+.social-btn.phone:hover {
+    background: #5568d3;
+    transform: translateY(-3px);
+}
+
+.social-btn.sms {
+    background: #764ba2;
+}
+
+.social-btn.sms:hover {
+    background: #6a4090;
+    transform: translateY(-3px);
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+}
+
+.social-btn.whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+}
+
+.social-btn.email {
+    background: #EA4335;
+}
+
+.social-btn.email:hover {
+    background: #c5221f;
+    transform: translateY(-3px);
+}
+
+.social-btn.location {
+    background: #4285F4;
+}
+
+.social-btn.location:hover {
+    background: #3367d6;
+    transform: translateY(-3px);
+}
+
+/* Pie de Página */
+.cv-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.cv-footer p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.footer-buttons button:hover {
+    background: white;
+    color: #333;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast i {
+    font-size: 1.2em;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 600px) {
+    .cv-container {
+        border-radius: 0;
+    }
+    
+    .cv-header {
+        padding: 30px 20px;
+    }
+    
+    .profile-section h1 {
+        font-size: 1.8em;
+    }
+    
+    .photo-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header-buttons {
+        gap: 10px;
+    }
+    
+    .header-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cv-main {
+        padding: 20px;
+    }
+    
+    .cv-section {
+        padding: 20px;
+    }
+    
+    .cv-section h2 {
+        font-size: 1.3em;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item.full-width {
+        grid-column: span 1;
+    }
+    
+    .info-value {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-buttons,
+    .academic-buttons {
+        flex-direction: column;
+    }
+    
+    .exp-btn,
+    .academic-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .social-btn {
+        width: 100%;
+    }
+    
+
+    
+    .footer-buttons {
+        flex-direction: column;
+    }
+    
+    .footer-buttons button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cv-section {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.cv-section:nth-child(1) { animation-delay: 0.1s; }
+.cv-section:nth-child(2) { animation-delay: 0.2s; }
+.cv-section:nth-child(3) { animation-delay: 0.3s; }
+.cv-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animación de botones al hacer click */
+.action-btn:active,
+.exp-btn:active,
+.academic-btn:active,
+.social-btn:active {
+    transform: scale(0.95);
+}
+

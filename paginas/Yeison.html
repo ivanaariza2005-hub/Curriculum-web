@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Yeison Chacon</title>
+    <link rel="stylesheet" href="../css/Yeison.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="cv-header">
+            <div class="profile-section">
+                <div class="photo-container">
+                    <img id="profile-preview" src="/imagenes/perfil.jpeg" alt="Foto de perfil">
+                </div>
+                <h1>Yeison Chacon</h1>
+                <div class="header-buttons">
+                    <a href="tel:3013625764" class="header-btn" title="Llamar">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="mailto:yeisonchaconflorez@gmail.com" class="header-btn" title="Enviar Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/573013625764" class="header-btn" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="cv-main">
+            <!-- Información Personal -->
+            <section class="cv-section" id="personal-info">
+                <h2>
+                    <i class="fas fa-user"></i> Información Personal
+                    <a href="#personal-info" class="section-link" title="Copiar enlace">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </h2>
+                <button id="personal-toggle" class="toggle-btn">
+                    <i class="fas fa-eye"></i> Ver información
+                </button>
+                <div id="personal-content" style="display: none;">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-birthday-cake"></i> Edad:</span>
+                            <span class="info-value">20 años</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-venus-mars"></i> Sexo:</span>
+                            <span class="info-value">Masculino</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Dirección:</span>
+                            <span class="info-value">
+                                Malagana
+                                <a href="https://www.google.com/maps/search/Malagana" target="_blank" class="info-btn" title="Ver en mapa">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-phone"></i> Teléfono:</span>
+                            <span class="info-value">
+                                <a href="tel:3013625764" class="contact-link">3013625764</a>
+                                <a href="tel:3013625764" class="action-btn" title="Llamar">
+                                    <i class="fas fa-phone-alt"></i>
+                                </a>
+                                <a href="sms:3013625764" class="action-btn" title="Enviar SMS">
+                                    <i class="fas fa-comment-alt"></i>
+                                </a>
+                                <a href="https://wa.me/573013625764" class="action-btn whatsApp" title="WhatsApp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="info-item full-width">
+                            <span class="info-label"><i class="fas fa-envelope"></i> Correo Electrónico:</span>
+                            <span class="info-value">
+                                <a href="mailto:yeisonchaconflorez@gmail.com" class="contact-link">yeisonchaconflorez@gmail.com</a>
+                                <a href="mailto:yeisonchaconflorez@gmail.com" class="action-btn" title="Enviar email">
+                                    <i class="fas fa-paper-plane"></i>
+                                </a>
+                                <button class="action-btn copy-btn" data-copy="yeisonchaconflorez@gmail.com" title="Copiar correo">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiencia -->
+            <section class="cv-section" id="experience">
+                <h2>
+                    <i class="fas fa-briefcase"></i> Experiencia
+                    <a href="#experience" class="section-link" title="Copiar enlace">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </h2>
+                <button id="experience-toggle" class="toggle-btn experience-toggle-btn">
+                    <i class="fas fa-eye"></i> Ver experiencia
+                </button>
+                <div id="experience-content" style="display: none;">
+                    <p>Hasta el momento no cuento con las habilidades y conocimientos suficientes para el desarrollo de páginas web, pero estoy trabajando para lograr adquirirlas.</p>
+                </div>
+            </section>
+
+            <!-- Diploma -->
+            <section class="cv-section" id="academic">
+                <h2>
+                    <i class="fas fa-graduation-cap"></i> Información Académica
+                    <a href="#academic" class="section-link" title="Copiar enlace">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </h2>
+                <button id="diploma-btn" class="diploma-download-btn">
+                    <i class="fas fa-file-pdf"></i> Ver Diploma
+                </button>
+            </section>
+
+            <!-- Contacto -->
+            <section class="cv-section" id="contact">
+                <h2>
+                    <i class="fas fa-share-alt"></i> Redes y Contacto
+                    <a href="#contact" class="section-link" title="Copiar enlace">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </h2>
+                <div class="social-links">
+                    <a href="tel:3013625764" class="social-btn phone" title="Llamar">
+                        <i class="fas fa-phone"></i>
+                        <span>Llamada</span>
+                    </a>
+                    <a href="sms:3013625764" class="social-btn sms" title="Mensaje de texto">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>SMS</span>
+                    </a>
+                    <a href="https://wa.me/573013625764" class="social-btn whatsapp" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:yeisonchaconflorez@gmail.com" class="social-btn email" title="Correo electrónico">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.google.com/maps/search/Malagana" class="social-btn location" title="Ver ubicación" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ubicación</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cv-footer">
+            <p>© 2024 Hoja de Vida - Yeison Chacon</p>
+            <div class="footer-buttons">
+                <a href="/paginas/Keila.html" class="toggle-btn">⬅ CV Anterior</a>
+                <a href="/index.html" class="toggle-btn"> Ir al inicio</a>
+                <a href="/paginas/Daniela.html" class="toggle-btn">CV Siguiente ➡</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/Yeison.js"></script>
+</body>
+</html>

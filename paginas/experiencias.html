@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experiencias Profesionales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/experiencias.css"/>
+</head>
+<body>
+
+<header>
+  <h1>CV <span>API</span> — Experiencias Profesionales</h1>
+  <div class="api-status">
+    <div class="dot"></div>
+    <span id="api-url-label">API en línea</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ── Formulario ── -->
+  <div class="panel">
+    <div class="panel-title">
+      <span id="form-title">Nueva Experiencia</span>
+      <span class="badge" id="form-badge">POST</span>
+    </div>
+
+    <input type="hidden" id="edit-id" />
+
+    <div class="form-group">
+      <label>Persona</label>
+      <select id="persona">
+        <option value="">Selecciona...</option>
+        <option>Daniela</option>
+        <option>Ivan</option>
+        <option>Keila</option>
+        <option>Yeison</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Empresa</label>
+      <input type="text" id="empresa" placeholder="Nombre de la empresa" />
+    </div>
+
+    <div class="form-group">
+      <label>Cargo</label>
+      <input type="text" id="cargo" placeholder="Tu cargo o rol" />
+    </div>
+
+    <div class="row2">
+      <div class="form-group">
+        <label>Fecha Inicio</label>
+        <input type="date" id="fechaInicio" />
+      </div>
+      <div class="form-group">
+        <label>Fecha Fin</label>
+        <input type="date" id="fechaFin" />
+      </div>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="trabajoActual" onchange="toggleFechaFin()" />
+      <label for="trabajoActual">Trabajo actual (sin fecha fin)</label>
+    </div>
+
+    <div class="form-group">
+      <label>Ciudad</label>
+      <input type="text" id="ciudad" placeholder="Ciudad" />
+    </div>
+
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="descripcion" placeholder="¿Qué hacías en ese trabajo?"></textarea>
+    </div>
+
+    <button class="btn btn-primary" onclick="guardar()">💾 Guardar Experiencia</button>
+    <button class="btn btn-secondary" onclick="cancelarEdicion()">✕ Cancelar</button>
+  </div>
+
+  <!-- ── Lista ── -->
+  <div class="right-panel">
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-total">0</div>
+        <div class="stat-label">Total</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-daniela" style="color:#6c63ff">0</div>
+        <div class="stat-label">Daniela</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-ivan" style="color:#ff6584">0</div>
+        <div class="stat-label">Ivan</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-keila" style="color:#43e97b">0</div>
+        <div class="stat-label">Keila / Yeison</div>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filtrar('', this)">Todos</button>
+      <button class="filter-btn" onclick="filtrar('Daniela', this)">Daniela</button>
+      <button class="filter-btn" onclick="filtrar('Ivan', this)">Ivan</button>
+      <button class="filter-btn" onclick="filtrar('Keila', this)">Keila</button>
+      <button class="filter-btn" onclick="filtrar('Yeison', this)">Yeison</button>
+    </div>
+
+    <div id="lista"><div class="loading">Cargando experiencias...</div></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="../js/experiencias.js"></script>
+</body>
+</html>

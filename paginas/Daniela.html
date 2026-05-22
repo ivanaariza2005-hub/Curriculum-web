@@ -4,147 +4,256 @@
     <meta charset="UTF-8">
     <title>Hoja de Vida - Daniela Paez</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/Daniela.css">
-
+ 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/Daniela.css">
+ 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+ 
 <body>
-
+ 
 <!-- BANNER -->
 <header class="banner">
-  <img src="/imagenes/image.png" alt="Foto Daniela" class="foto-perfil">
+    <img src="../imagenes/image.png">
     <h1>Daniela Andrea Paez Alvis</h1>
     <p>Estudiante de Ingeniería de Software</p>
 </header>
-
+ 
+<nav class="menu-nav">
+    <ul>
+        <li><a href="/index.html"> Ir al Inicio</a></li>
+        <li><a href="#datos">Datos personales</a></li>
+        <li><a href="#perfil">Perfil profesional</a></li>
+        <li><a href="#formacion">Formación académica</a></li>
+        <li><a href="#diploma">Diploma de bachiller</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#referencias">Referencias</a></li>
+        <li><a href="#punto JAD">Punto JAD</a></li>
+        <li><a href="#info">Más información</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+ 
 <!-- AUDIO -->
 <audio id="audioFondo" loop>
-    <source src="/sonidos/audio.mp3" type="audio/mpeg">
+    <source src="../sonidos/audio.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-window.addEventListener("load", () => {
-    const audio = document.getElementById("audioFondo");
-    audio.play().catch(() => {
-        document.body.addEventListener("click", () => {
-            audio.play();
-        }, { once: true });
-    });
-});
-</script>
-
-<script>
-document.body.addEventListener('click', () => {
-    document.getElementById('miAudio').play();
-}, { once: true });
-</script>
-
-<!-- CONTENIDO -->
+ 
+<!-- CONTENIDO PRINCIPAL -->
 <main class="contenedor">
-
-<section>
-    <h2><i class="fa-solid fa-user"></i> Datos personales</h2>
-    <ul>
-        <li><strong>Documento:</strong> C.C. 1043136652</li>
-        <li><strong>Fecha de nacimiento:</strong> 6 de febrero de 2007</li>
-        <li><strong>Edad:</strong> 19 años</li>
-        <li><strong>Ciudad:</strong> El Carmen de Bolívar, Bolívar</li>
-        <li><strong>Dirección:</strong> Carrera 40 Calle 28B #228 Apto 1</li>
-        <li><strong>Teléfono:</strong> 321 839 2265</li>
-        <li><strong>Correo:</strong> dpaeza@unicartagena.edu.co</li>
-        <li><strong>Estado civil:</strong> Soltera</li>
-    </ul>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-id-card"></i> Perfil profesional</h2>
-    <p>
-        Estudiante de Ingeniería de Software y Tecnóloga en Análisis y Desarrollo de Software,
-        con interés en el diseño, análisis y desarrollo de soluciones tecnológicas. Me caracterizo
-        por ser una persona responsable, amable y comprometida, con disposición permanente para
-        aprender y trabajar en equipo.
-    </p>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-graduation-cap"></i> Formación académica</h2>
-    <ul>
-        <li><strong>Ingeniería de Software</strong> – Universidad de Cartagena (En curso)</li>
-        <li><strong>Tecnólogo en Análisis y Desarrollo de Software</strong> – SENA (En curso)</li>
-    </ul>
-</section>
-<section>
-    <h2> Diploma de Bachiller</h2>
-    <p>
-        <a href="/imagenes/Diploma .pdf" target="_blank">
-            📄 Ver diploma de bachiller
-        </a>
-    </p>
-</section>
-<section>
-    <h2><i class="fa-solid fa-briefcase"></i> Experiencia</h2>
-    <p>
-        Experiencia en proyectos académicos relacionados con el desarrollo web,
-        análisis y diseño de software, uso de HTML, CSS y documentación básica de proyectos.
-    </p>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-list-check"></i> Habilidades</h2>
-    <div class="habilidades">
+ 
+    <section id="datos">
+        <h2><i class="fa-solid fa-user"></i> Datos personales</h2>
         <ul>
-            <li>HTML básico</li>
-            <li>CSS básico</li>
-            <li>Ofimática</li>
-            <li>Manejo de herramientas digitales</li>
+            <li><strong>Documento:</strong> C.C. 1043136652</li>
+            <li><strong>Fecha de nacimiento:</strong> 6 de febrero de 2007</li>
+            <li><strong>Edad:</strong> 19 años</li>
+            <li><strong>Ciudad:</strong> El Carmen de Bolívar, Bolívar</li>
+            <li><strong>Dirección:</strong> Carrera 40 Calle 28B #228 Apto 1</li>
+            <li><strong>Teléfono:</strong> 321 839 2265</li>
+            <li><strong>Correo:</strong> dpaeza@unicartagena.edu.co</li>
+            <li><strong>Estado civil:</strong> Soltera</li>
         </ul>
+    </section>
+ 
+    <section id="perfil">
+        <h2><i class="fa-solid fa-id-card"></i> Perfil profesional</h2>
+        <p>
+            Estudiante de Ingeniería de Software y Tecnóloga en Análisis y Desarrollo de Software,
+            con interés en el diseño, análisis y desarrollo de soluciones tecnológicas. Me caracterizo
+            por ser una persona responsable, amable y comprometida, con disposición permanente para
+            aprender y trabajar en equipo.
+        </p>
+    </section>
+ 
+    <section id="formacion">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Formación académica</h2>
         <ul>
-            <li>Responsabilidad</li>
-            <li>Trabajo en equipo</li>
-            <li>Comunicación</li>
-            <li>Puntualidad</li>
+            <li><strong>Ingeniería de Software</strong> – Universidad de Cartagena (En curso)</li>
+            <li><strong>Tecnólogo en Análisis y Desarrollo de Software</strong> – SENA (En curso)</li>
         </ul>
-    </div>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-certificate"></i> Cursos</h2>
-    <ul>
-        <li>English Does Work – Level 1 | SENA | 2025</li>
-        <li>English Does Work – Level 2 | SENA | 2025</li>
-        <li>Aprendiz Digital | SENA | 2025</li>
-        <li>Reconocimiento de la ciencia y la innovación | SENA | 2021</li>
-    </ul>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-address-book"></i> Referencias</h2>
-    <p><strong>Profesional:</strong> Carlos Andrés Martínez López – 318 839 2265</p>
-    <p><strong>Familiar:</strong> Loraine Julieth Alvis Navarro (Madre) – 311 686 9577</p>
-</section>
-
-<section>
-    <h2><i class="fa-solid fa-circle-info"></i> Punto JAD</h2>
-    <p>
-        Esta hoja de vida fue desarrollada aplicando conocimientos básicos de HTML y CSS,
-        priorizando la organización de la información, el diseño adaptable y la correcta
-        presentación de los datos personales y académicos.
-    </p>
-</section>
-
-<!-- INTERACTIVIDAD -->
-<button onclick="window.print()" class="btn">
-    <i class="fa-solid fa-file-pdf"></i> Generar PDF
-</button>
-
+    </section>
+ 
+    <section id="diploma">
+        <h2>Diploma de Bachiller</h2>
+        <p>
+            <a href="/imagenes/Diploma .pdf" target="_blank">
+                📄 Ver diploma de bachiller
+            </a>
+        </p>
+    </section>
+ 
+    <section id="experiencia">
+        <h2><i class="fa-solid fa-briefcase"></i> Experiencia</h2>
+        <p>
+            Experiencia en proyectos académicos relacionados con el desarrollo web,
+            análisis y diseño de software, uso de HTML, CSS y documentación básica de proyectos.
+        </p>
+    </section>
+ 
+    <section id="habilidades">
+        <h2><i class="fa-solid fa-list-check"></i> Habilidades</h2>
+        <div class="habilidades">
+            <ul>
+                <li>HTML básico</li>
+                <li>CSS básico</li>
+                <li>Ofimática</li>
+                <li>Manejo de herramientas digitales</li>
+            </ul>
+            <ul>
+                <li>Responsabilidad</li>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación</li>
+                <li>Puntualidad</li>
+            </ul>
+        </div>
+    </section>
+ 
+    <section id="cursos">
+        <h2><i class="fa-solid fa-certificate"></i> Cursos</h2>
+        <div class="cursos-container">
+            <a href="../imagenes/english1.pdf"target="_blank" class="curso-card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>English Does Work – Level 1</h3>
+                <p>SENA | 2025</p>
+            </a>
+            <a href="../imagenes/english.pdf" target="_blank" class="curso-card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>English Does Work – Level 2</h3>
+                <p>SENA | 2025</p>
+            </a>
+            <a href="../imagenes/aprendiz.pdf" target="_blank" class="curso-card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Aprendiz Digital</h3>
+                <p>SENA | 2025</p>
+            </a>
+            <a href="/certificados/ciencia.pdf" target="_blank" class="curso-card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Ciencia e Innovación</h3>
+                <p>SENA | 2021</p>
+            </a>
+        </div>
+    </section>
+ 
+    <section id="referencias">
+        <h2><i class="fa-solid fa-address-book"></i> Referencias</h2>
+        <p><strong>Profesional:</strong> Carlos Andrés Martínez López – 318 839 2265</p>
+        <p><strong>Familiar:</strong> Loraine Julieth Alvis Navarro (Madre) – 311 686 9577</p>
+    </section>
+ 
+    <section id="punto JAD">
+        <h2><i class="fa-solid fa-circle-info"></i> Punto JAD</h2>
+        <p>
+            Esta hoja de vida fue desarrollada aplicando conocimientos básicos de HTML y CSS,
+            priorizando la organización de la información, el diseño adaptable y la correcta
+            presentación de los datos personales y académicos.
+        </p>
+    </section>
+ 
+    <!-- SECCIÓN: INFORMACIÓN ADICIONAL CON BOTONES -->
+    <section id="info">
+        <h2><i class="fa-solid fa-circle-info"></i> Más información</h2>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+            <button class="btn" style="width: auto; padding: 10px 20px;" onclick="mostrarInfo('sena')">
+                <i class="fa-solid fa-school"></i> Certificaciones SENA
+            </button>
+            <button class="btn" style="width: auto; padding: 10px 20px;" onclick="mostrarInfo('universidad')">
+                <i class="fa-solid fa-building-columns"></i> Universidad
+            </button>
+            <button class="btn" style="width: auto; padding: 10px 20px;" onclick="mostrarInfo('contacto')">
+                <i class="fa-solid fa-envelope"></i> Contacto rápido
+            </button>
+        </div>
+        <div id="infoAdicional" style="margin-top: 20px; padding: 15px; background: #f5f7fa; border-radius: 8px; display: none;">
+            <!-- Aquí se mostrará la información dinámica -->
+        </div>
+    </section>
+ 
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="contacto-section">
+        <h2><i class="fa-regular fa-comment-dots"></i> Contáctame</h2>
+        <p>Si deseas comunicarte conmigo, por favor completa el siguiente formulario:</p>
+ 
+        <form id="formContacto">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre completo *</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Daniela Paez">
+                    <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Correo electrónico *</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+                    <div class="invalid-feedback">Ingresa un correo válido (ej: usuario@dominio.com).</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono / Celular</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej: 3218392265">
+                    <div class="invalid-feedback">El teléfono solo debe contener números (mínimo 7 dígitos).</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="asunto" class="form-label">Asunto *</label>
+                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Motivo de contacto">
+                    <div class="invalid-feedback">Por favor indica el asunto.</div>
+                </div>
+                <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje *</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <div class="invalid-feedback">No olvides escribir tu mensaje.</div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-enviar" id="btnEnviarFormulario">
+                        <i class="fa-regular fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
+ 
+    <button onclick="window.print()" class="btn">
+        <i class="fa-solid fa-file-pdf"></i> Generar PDF
+    </button>
+ 
 </main>
-
+ 
 <footer>
-    <p>Hoja de vida digital – 2026</p>
+    <div class="footer-nav" style="display: flex; justify-content: space-between; padding: 10px 40px;">
+        <a href="/paginas/Yeison.html" style="color: #eaf3ec; font-weight: bold;">⬅ CV Anterior</a>
+        <a href="/paginas/Ivan.html" style="color: #f0f5f2; font-weight: bold;">CV Siguiente ➡</a>
+    </div>
 </footer>
-
+ 
+<!-- Modal de éxito/error (Bootstrap) -->
+<div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <h5 class="modal-title" id="modalExitoLabel"><i class="fa-regular fa-circle-check"></i> Mensaje enviado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- JavaScript externo (al final del body para mejor rendimiento) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("2K2JeujDwsZd-9amc")</script>
+<scrip src="../js/daniela.js"></script>
+ 
 </body>
 </html>
